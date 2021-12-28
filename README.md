@@ -1,7 +1,7 @@
 # Allocator #
 
 
-I'have implemented a simple allocator library. I kept a linked list as well. However, my linked list will not occupy space inside the heap. I can safely assume that it is disjoint with the heap. Moreover, my linked list will track free chunks and occupied spaces inside the heap. 
+I have implemented a simple allocator library. I kept a linked list as well. However, my linked list will not occupy space inside the heap. I can safely assume that it is disjoint with the heap. Moreover, my linked list will track free chunks and occupied spaces inside the heap. 
 
 Operations of my allocator library will be called concurrently by different threads. Therefore, I need to be careful about data races. I implemented a sequential heap manager first, i.e., it works when processes have a single thread. Then, I add a synchronization mechanism to prevent data races. 
 
